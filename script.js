@@ -99,7 +99,7 @@ console.log(distance);
 console.log(typeof distance);
  */
 
-// math operations
+/* // math operations
 const currentYear = 2022;
 const ageTumpa = currentYear - 1998; //26
 const ageRahat = currentYear - 1998; //26
@@ -280,4 +280,173 @@ b += "10";
 b--;
 console.log(b); //1010 -1
 
-let n = 1 - "1";
+let n = 1 - "1"; */
+
+// truthy and falsy values
+// falsy values: 0, "", undefined, null, NaN
+console.log(Boolean(0));
+console.log(Boolean(""));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+
+//truthy
+console.log(Boolean(1));
+console.log(Boolean(" "));
+console.log(Boolean({}));
+
+let money = 10;
+
+if (money) {
+  console.log("I have money");
+} else {
+  console.log("I have no money");
+}
+
+// equality operators
+/*
+=, assign
+== or ===, equality
+!= or !==, not equal
+*/
+
+const age = "21";
+
+if (age == 21) {
+  // js does type coercion, not-strict
+  console.log("You are an adult.");
+} else {
+  console.log("You are too young.");
+}
+
+if (age === 21) {
+  // js doesn't type coercion, strict
+  console.log("You are an adult.");
+} else {
+  console.log("You are too young.");
+}
+
+// const favouriteNumber = Number(prompt("What's your favourite number?"));
+// console.log(favouriteNumber);
+
+// nested conditions
+const testAge = 18;
+const testNID = true;
+const testBirthReg = false;
+const testPassport = true;
+
+if (testAge === 18) {
+  if (testNID) {
+    if (testPassport) {
+      console.log(`Your age: ${testAge}, applicable for this job. 💯`);
+    }
+  }
+} else if (testAge !== 18) {
+  if (testBirthReg) {
+    console.log(
+      `Your age: ${testAge}, and you're not applicable for this job. But you can apply later for NID and Passport. `
+    );
+  }
+}
+
+// and , or (&&, ||)
+const savedMoney = 150000;
+const ownHouse = true;
+const hasBusiness = false;
+
+if ((ownHouse && savedMoney >= 200000) || hasBusiness) {
+  console.log("Tahole tomar biya hobe na.");
+} else {
+  console.log("Tahole tomar biya hobe na.");
+}
+
+const pocketMoney = 200;
+const timeLeft = 5;
+
+if (pocketMoney >= 100 || timeLeft >= 6) {
+  console.log("Burger khaite parben");
+} else {
+  console.log("Parben na");
+}
+
+// leap year testing
+/*
+year % 400 === 0
+year % 4 === 0 && year % 100 !== 0
+*/
+
+let year = "asgfjsdg";
+
+if (typeof year === "number") {
+  if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
+    console.log(`${year} is a leap year.`);
+  } else {
+    console.log(`${year} is not a leap year.`);
+  }
+} else {
+  console.log("Enter a valid year.");
+}
+
+// switch case statements
+const day = "thursday";
+
+switch (day) {
+  case "saturday": // day === "saturday"
+    console.log("No class!");
+    break;
+  case "sunday":
+    console.log("Class ase!");
+    break;
+  case "monday":
+    console.log("No class!");
+    break;
+  case "tuesday":
+  case "wednesday":
+    console.log("No class!");
+    break;
+  case "thursday":
+  case "friday":
+    console.log("Class ase!");
+    break;
+  default:
+    console.log("Not a valid day!");
+}
+
+// statement and expression
+// expression can produce values
+// statement can't produce values, only manupulates expression
+
+const text = "23 is bigger number.";
+const text2 = "23 is not bigger number.";
+
+if (23 > 30) {
+  console.log(text);
+} else {
+  console.log(text2);
+}
+
+// ternary operator
+let yourNumber = 150;
+
+if (yourNumber < 50) {
+  console.log("Your number is big!");
+} else {
+  console.log("Your number is not big");
+}
+
+if (yourNumber < 50) console.log("Your number is big!");
+else console.log("Your number is not big");
+
+yourNumber > 50
+  ? console.log("Your number is big!")
+  : console.log("Your number is not big");
+
+yourNumber === 100 ? (yourNumber += 100) : (yourNumber -= 100);
+console.log(yourNumber);
+
+const a = 5;
+const b = 10;
+let c;
+
+a > b ? (c = a + b) : (c = b - a);
+console.log(c);
